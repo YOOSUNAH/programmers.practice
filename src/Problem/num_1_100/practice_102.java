@@ -1,4 +1,4 @@
-package Problem;
+package Problem.num_1_100;
 
 public class practice_102 {
 // 대문자로 변환하기
