@@ -16,8 +16,7 @@ public class greedy_2_조이스틱 {
 
         // 1. 상하로 움직이는 부분을 더하는 부분
         for (int i = 0; i < name.length(); i++) {
-            answer += Math.min(name.charAt(i) - 'A', 'Z' - name.charAt(i) + 1);
-            // A로 부터 몇번 위로 이동 하는지, Z로부터 몇번 아래로 이동하는지 비교
+            answer += Math.min(name.charAt(i) - 'A', 'Z' - name.charAt(i) + 1); // A로 부터 몇번 위로 이동 하는지, Z로부터 몇번 아래로 이동하는지 비교
             index = i + 1;
 
             // 2. 연속되는 A 갯수 확인
@@ -25,8 +24,7 @@ public class greedy_2_조이스틱 {
                 index++;
             }
 
-            // 3. 좌우 이동 수가 적은 방법을 선택하는 부분
-            // 순서대로 가는 것과, 뒤로 돌아가는 것  비교
+            // 3. 좌우 이동 수가 적은 방법을 선택하는 부분 // 순서대로 가는 것과, 뒤로 돌아가는 것  비교
             move = Math.min(move, i * 2 + length - index);
             move = Math.min(move, (length - index) * 2 + i);
         }
